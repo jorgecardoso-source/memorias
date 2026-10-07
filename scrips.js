@@ -1,4 +1,4 @@
-```javascript
+javascript
 const inicio = new Date(2026, 7, 10, 0, 0, 0);
 
 function atualizarContador() {
@@ -43,4 +43,3 @@ function atualizarContador() {
 atualizarContador();
 
 setInterval(atualizarContador, 1000);
-```
