@@ -1,137 +1,206 @@
+```html
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Para a Bia ❤️</title>
+
+    <title>Nosso Cantinho ❤️</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-    <div class="hearts"></div>
+    <div class="background-hearts"></div>
+
+    <header class="inicio">
+
+        <div class="intro">
+            <p class="mini">UM CANTINHO SÓ NOSSO</p>
+
+            <h1>
+                Bia <span>❤️</span>
+            </h1>
+
+            <p class="subtitulo">
+                Algumas das minhas lembranças favoritas<br>
+                têm você nelas.
+            </p>
+
+            <div class="seta">↓</div>
+        </div>
+
+    </header>
+
 
     <main>
 
-        <section class="hero">
-            <p class="small">PARA O AMOR DA MINHA VIDA</p>
-            <h1>Bia ❤️</h1>
-            <p class="subtitle">
-                Eu fiz isso só para você.
-            </p>
+        <!-- CONTADOR -->
 
-            <button onclick="abrirCarta()">Abrir minha carta 💌</button>
-        </section>
+        <section class="contador-section">
 
-        <section id="carta" class="carta escondida">
-            <div class="card">
-                <span class="heart">♥</span>
+            <p class="mini">DESDE 10 DE AGOSTO DE 2026</p>
 
-                <h2>Para você, meu amor</h2>
-
-                <p>
-                    Eu poderia escrever mil coisas aqui, mas ainda assim
-                    provavelmente não conseguiria explicar tudo o que você
-                    significa para mim.
-                </p>
-
-                <p>
-                    Desde que você entrou na minha vida, muita coisa mudou.
-                    Cada momento ao seu lado se tornou uma lembrança que eu
-                    quero guardar para sempre.
-                </p>
-
-                <p>
-                    Obrigado por ser você, por estar comigo e por fazer meus
-                    dias serem muito melhores.
-                </p>
-
-                <p class="final">
-                    Eu te amo. ❤️
-                </p>
-
-                <p class="assinatura">
-                    Com amor,<br>
-                    Jorge
-                </p>
-            </div>
-        </section>
-
-        <section class="tempo">
-            <p class="small">NOSSA HISTÓRIA COMEÇOU EM</p>
-            <h2>10 de agosto de 2026 ❤️</h2>
+            <h2>
+                Quanto tempo já faz? ❤️
+            </h2>
 
             <div class="contador">
-                <div>
-                    <strong id="dias">0</strong>
-                    <span>dias</span>
+
+                <div class="tempo">
+                    <span id="dias">0</span>
+                    <small>dias</small>
                 </div>
 
-                <div>
-                    <strong id="horas">0</strong>
-                    <span>horas</span>
+                <div class="tempo">
+                    <span id="horas">0</span>
+                    <small>horas</small>
                 </div>
 
-                <div>
-                    <strong id="minutos">0</strong>
-                    <span>minutos</span>
+                <div class="tempo">
+                    <span id="minutos">0</span>
+                    <small>minutos</small>
                 </div>
 
-                <div>
-                    <strong id="segundos">0</strong>
-                    <span>segundos</span>
+                <div class="tempo">
+                    <span id="segundos">0</span>
+                    <small>segundos</small>
                 </div>
+
             </div>
 
-            <p class="frase">
-                E que esse contador nunca pare. ❤️
+            <p class="contador-frase">
+                E ainda é só o começo.
             </p>
+
         </section>
 
-        <section class="fotos">
-            <h2>Nossos momentos 📸</h2>
+
+        <!-- MURAL -->
+
+        <section class="mural">
+
+            <p class="mini">NOSSAS LEMBRANÇAS</p>
+
+            <h2>
+                Pequenos momentos,<br>
+                grandes memórias.
+            </h2>
 
             <div class="galeria">
 
-                <!-- TROQUE AS IMAGENS ABAIXO PELAS FOTOS DE VOCÊS -->
+                <div class="foto-card grande">
+                    <img src="fotos/foto1.jpeg" alt="Uma lembrança nossa">
 
-                <div class="foto">
-                    <img src="fotos/foto1.jpeg" alt="Nosso momento">
+                    <div class="legenda">
+                        <span>❤️</span>
+                        <p>Um dos meus momentos favoritos.</p>
+                    </div>
                 </div>
 
-                <div class="foto">
-                    <img src="fotos/foto2.jpeg" alt="Nosso momento">
+
+                <div class="foto-card">
+                    <img src="fotos/foto2.jpeg" alt="Uma lembrança nossa">
+
+                    <div class="legenda">
+                        <span>✨</span>
+                        <p>Mais uma memória que eu guardo comigo.</p>
+                    </div>
                 </div>
 
-                <div class="foto">
-                    <img src="fotos/foto3.jpeg" alt="Nosso momento">
+
+                <div class="foto-card">
+                    <img src="fotos/foto3.jpeg" alt="Uma lembrança nossa">
+
+                    <div class="legenda">
+                        <span>🤍</span>
+                        <p>Porque momentos simples também ficam.</p>
+                    </div>
                 </div>
 
             </div>
+
         </section>
 
-        <section class="final-section">
-            <div class="big-heart">❤️</div>
 
-            <h2>Por mais muitos momentos juntos.</h2>
+        <!-- FRASE -->
+
+        <section class="frase-section">
+
+            <div class="aspas">“</div>
 
             <p>
-                Essa é só uma pequena forma de mostrar o quanto você é
-                especial para mim.
+                No meio de tantos momentos da vida,
+                alguns se tornam especiais simplesmente
+                porque foram vividos com a pessoa certa.
             </p>
 
-            <p class="forever">
-                Eu escolheria você de novo. E de novo. E de novo.
+            <div class="aspas final">”</div>
+
+        </section>
+
+
+        <!-- SOBRE NÓS -->
+
+        <section class="sobre">
+
+            <p class="mini">SOBRE NÓS</p>
+
+            <h2>
+                Nossa história ainda está sendo escrita.
+            </h2>
+
+            <p class="texto">
+                Talvez daqui a alguns anos a gente olhe para essas
+                fotos e ria de como tudo começou.
             </p>
+
+            <p class="texto">
+                Mas eu quero guardar cada fase, cada lugar,
+                cada conversa, cada risada e cada momento
+                que fez parte da nossa história.
+            </p>
+
+            <p class="destaque">
+                Porque no final, são essas pequenas coisas
+                que fazem tudo valer a pena. ❤️
+            </p>
+
+        </section>
+
+
+        <!-- FINAL -->
+
+        <section class="final">
+
+            <div class="coracao">❤️</div>
+
+            <h2>
+                Para você, Bia.
+            </h2>
+
+            <p>
+                Que esse cantinho cresça junto com a gente.
+            </p>
+
+            <p class="assinatura">
+                Com amor,<br>
+                Jorge
+            </p>
+
         </section>
 
     </main>
 
+
     <footer>
-        Feito com amor para a Bia ❤️
+        Feito com carinho para nós dois ❤️
     </footer>
+
 
     <script src="script.js"></script>
 
 </body>
 </html>
+```
