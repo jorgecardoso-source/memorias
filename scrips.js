@@ -1,423 +1,46 @@
-```css
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+```javascript
+const inicio = new Date(2026, 7, 10, 0, 0, 0);
 
-html {
-    scroll-behavior: smooth;
-}
+function atualizarContador() {
 
-body {
-    background: #160b10;
-    color: #fff;
-    font-family: Georgia, "Times New Roman", serif;
-    overflow-x: hidden;
-}
+    const agora = new Date();
 
+    let diferenca = agora.getTime() - inicio.getTime();
 
-/* =========================
-   INÍCIO
-========================= */
-
-.inicio {
-    min-height: 100vh;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    text-align: center;
-
-    background:
-        radial-gradient(
-            circle at center,
-            #64243e 0%,
-            #351321 45%,
-            #160b10 100%
-        );
-}
-
-.intro {
-    padding: 30px;
-}
-
-.mini {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    letter-spacing: 4px;
-    opacity: .55;
-    margin-bottom: 25px;
-}
-
-.intro h1 {
-    font-size: clamp(75px, 15vw, 150px);
-    font-weight: normal;
-    font-style: italic;
-}
-
-.intro h1 span {
-    font-size: .35em;
-}
-
-.subtitulo {
-    margin-top: 25px;
-    font-size: 20px;
-    line-height: 1.7;
-    opacity: .8;
-}
-
-.seta {
-    margin-top: 70px;
-    font-size: 30px;
-    opacity: .5;
-
-    animation: subirDescer 2s infinite;
-}
-
-
-/* =========================
-   CONTADOR
-========================= */
-
-.contador-section {
-    padding: 120px 20px;
-    text-align: center;
-    background: #1e0c15;
-}
-
-.contador-section h2 {
-    font-size: 38px;
-    font-weight: normal;
-    margin-bottom: 55px;
-}
-
-.contador {
-    display: flex;
-    justify-content: center;
-    gap: 18px;
-    flex-wrap: wrap;
-}
-
-.tempo {
-    min-width: 115px;
-    padding: 22px 15px;
-
-    border-radius: 16px;
-
-    background: rgba(255,255,255,.06);
-    border: 1px solid rgba(255,255,255,.08);
-}
-
-.tempo span {
-    display: block;
-    font-size: 40px;
-}
-
-.tempo small {
-    font-family: Arial, sans-serif;
-    font-size: 11px;
-    opacity: .5;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-}
-
-.contador-frase {
-    margin-top: 40px;
-    font-style: italic;
-    opacity: .5;
-}
-
-
-/* =========================
-   MURAL
-========================= */
-
-.mural {
-    max-width: 1050px;
-    margin: auto;
-    padding: 120px 25px;
-}
-
-.mural h2 {
-    font-size: 42px;
-    font-weight: normal;
-    line-height: 1.2;
-    margin-bottom: 60px;
-}
-
-.galeria {
-    display: grid;
-
-    grid-template-columns: 1fr 1fr;
-
-    gap: 25px;
-}
-
-.foto-card {
-    background: #241019;
-    border-radius: 18px;
-    overflow: hidden;
-
-    box-shadow: 0 20px 50px rgba(0,0,0,.3);
-
-    transition: transform .4s;
-}
-
-.foto-card:hover {
-    transform: translateY(-7px);
-}
-
-.foto-card.grande {
-    grid-row: span 2;
-}
-
-.foto-card img {
-    display: block;
-
-    width: 100%;
-    height: 380px;
-
-    object-fit: cover;
-}
-
-.foto-card.grande img {
-    height: 785px;
-}
-
-.legenda {
-    padding: 20px 22px 25px;
-}
-
-.legenda span {
-    font-size: 20px;
-}
-
-.legenda p {
-    margin-top: 8px;
-
-    font-size: 16px;
-    opacity: .65;
-    line-height: 1.5;
-}
-
-
-/* =========================
-   FRASE
-========================= */
-
-.frase-section {
-    padding: 120px 25px;
-
-    text-align: center;
-
-    background: #321321;
-}
-
-.frase-section p {
-    max-width: 700px;
-    margin: auto;
-
-    font-size: 30px;
-    line-height: 1.6;
-
-    font-style: italic;
-}
-
-.aspas {
-    font-size: 80px;
-    height: 50px;
-    opacity: .3;
-}
-
-.aspas.final {
-    margin-top: 20px;
-}
-
-
-/* =========================
-   SOBRE
-========================= */
-
-.sobre {
-    max-width: 750px;
-    margin: auto;
-
-    padding: 130px 25px;
-
-    text-align: center;
-}
-
-.sobre h2 {
-    font-size: 40px;
-    font-weight: normal;
-
-    line-height: 1.3;
-
-    margin-bottom: 40px;
-}
-
-.texto {
-    font-size: 18px;
-    line-height: 1.9;
-
-    opacity: .65;
-
-    margin-bottom: 25px;
-}
-
-.destaque {
-    margin-top: 50px;
-
-    font-size: 21px;
-    line-height: 1.7;
-
-    color: #f3b6c9;
-}
-
-
-/* =========================
-   FINAL
-========================= */
-
-.final {
-    padding: 130px 25px;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            #321321,
-            #5c203b
-        );
-}
-
-.coracao {
-    font-size: 70px;
-
-    animation: pulsar 1.6s infinite;
-}
-
-.final h2 {
-    margin-top: 30px;
-
-    font-size: 40px;
-    font-weight: normal;
-}
-
-.final p {
-    margin-top: 20px;
-
-    font-size: 18px;
-    opacity: .7;
-}
-
-.assinatura {
-    margin-top: 50px !important;
-
-    font-style: italic;
-    line-height: 1.8;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer {
-    padding: 25px;
-
-    text-align: center;
-
-    background: #10070b;
-
-    font-family: Arial, sans-serif;
-    font-size: 12px;
-
-    opacity: .5;
-}
-
-
-/* =========================
-   ANIMAÇÕES
-========================= */
-
-@keyframes pulsar {
-
-    0%, 100% {
-        transform: scale(1);
+    if (diferenca < 0) {
+        diferenca = 0;
     }
 
-    50% {
-        transform: scale(1.12);
-    }
+    const totalSegundos = Math.floor(diferenca / 1000);
 
+    const dias = Math.floor(totalSegundos / 86400);
+
+    const horas = Math.floor(
+        (totalSegundos % 86400) / 3600
+    );
+
+    const minutos = Math.floor(
+        (totalSegundos % 3600) / 60
+    );
+
+    const segundos =
+        totalSegundos % 60;
+
+
+    document.getElementById("dias").textContent = dias;
+
+    document.getElementById("horas").textContent =
+        String(horas).padStart(2, "0");
+
+    document.getElementById("minutos").textContent =
+        String(minutos).padStart(2, "0");
+
+    document.getElementById("segundos").textContent =
+        String(segundos).padStart(2, "0");
 }
 
-@keyframes subirDescer {
 
-    0%, 100% {
-        transform: translateY(0);
-    }
+atualizarContador();
 
-    50% {
-        transform: translateY(10px);
-    }
-
-}
-
-
-/* =========================
-   CELULAR
-========================= */
-
-@media (max-width: 700px) {
-
-    .intro h1 {
-        font-size: 90px;
-    }
-
-    .subtitulo {
-        font-size: 17px;
-    }
-
-    .contador-section h2 {
-        font-size: 30px;
-    }
-
-    .tempo {
-        min-width: 90px;
-    }
-
-    .tempo span {
-        font-size: 30px;
-    }
-
-    .mural h2 {
-        font-size: 34px;
-    }
-
-    .galeria {
-        grid-template-columns: 1fr;
-    }
-
-    .foto-card.grande {
-        grid-row: auto;
-    }
-
-    .foto-card img,
-    .foto-card.grande img {
-        height: 400px;
-    }
-
-    .frase-section p {
-        font-size: 23px;
-    }
-
-    .sobre h2 {
-        font-size: 32px;
-    }
-
-}
+setInterval(atualizarContador, 1000);
 ```
